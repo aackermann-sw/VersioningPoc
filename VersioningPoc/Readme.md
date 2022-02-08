@@ -5,7 +5,7 @@
 * Install-Package [Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer/)
 
 
--- program.cs
+# program.cs
 
 * let’s set up the main configuration for versioning:
 ```C#
@@ -32,7 +32,7 @@ builder.Services.AddVersionedApiExplorer(
 ```
 
 
-** Definir con que versiones va ser compatible
+* Definir con que versiones va ser compatible
 
 ```C#
     [ApiVersion("1.0")]
