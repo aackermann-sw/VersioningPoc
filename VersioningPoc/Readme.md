@@ -1,7 +1,8 @@
 ﻿
 
-Install-Package Microsoft.AspNetCore.Mvc.Versioning
-Install-Package Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer
+* Install-Package [Microsoft.AspNetCore.Mvc.Versioning](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Versioning/)
+
+* Install-Package [Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer/)
 
 
 -- program.cs
