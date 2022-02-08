@@ -32,10 +32,28 @@ builder.Services.AddVersionedApiExplorer(
 ```
 
 
-* Definir con que versiones va ser compatible
+* Define which versions will be compatible
 
 ```C#
-    [ApiVersion("1.0")]
+    [ApiVersion("1.0", Deprecated = true)]
     [ApiVersion("2.0")]
-    MyController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class WeatherForecastController : ControllerBase
+```
+
+* Map custom method
+```C#
+        [MapToApiVersion("2.0")]
+        [HttpGet(Name = "GetWeatherForecast")]
+        public IEnumerable<WeatherForecast> Get2()
+        {
+            return Enumerable.Range(1, 55).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            })
+            .ToArray();
+        }
 ```
